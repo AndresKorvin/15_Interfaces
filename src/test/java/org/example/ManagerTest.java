@@ -12,7 +12,7 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ManagerTest {
-    Ticket ticket1 = new Ticket(1, 600, "London", "Paris", 2);
+    Ticket ticket1 = new Ticket(1, 600, "London", "Paris", 3);
     Ticket ticket2 = new Ticket(2, 800, "Prague", "Dublin", 4);
     Ticket ticket3 = new Ticket(3, 900, "Prague", "Dublin", 4);
     Ticket ticket4 = new Ticket(4, 500, "London", "Prague", 3);
@@ -32,7 +32,9 @@ class ManagerTest {
             "don, ris"
     })
     void search(String from, String to) {
-        Ticket [] actual =  manager.search(from, to);
+        TicketByTimeComparator service = new TicketByTimeComparator();
+
+        Ticket [] actual =  manager.search(from, to, service);
         Ticket [] expected =  { ticket6, ticket1 };
         Assertions.assertArrayEquals(expected, actual);
     }
