@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -68,7 +68,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-<!--                                            <minimum> 100%</minimum>-->
+                                            <!--                                            <minimum> 100%</minimum>-->
                                         </limit>
                                     </limits>
                                 </rule>
@@ -80,30 +80,30 @@
 
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.github.spotbugs</groupId>-->
-<!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
-<!--                <version>4.7.2.1</version>-->
-<!--                <dependencies>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.github.spotbugs</groupId>-->
+            <!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
+            <!--                <version>4.7.2.1</version>-->
+            <!--                <dependencies>-->
 
-<!--                    <dependency>-->
-<!--                        <groupId>com.github.spotbugs</groupId>-->
-<!--                        <artifactId>spotbugs</artifactId>-->
-<!--                        <version>4.7.3</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>com.github.spotbugs</groupId>-->
+            <!--                        <artifactId>spotbugs</artifactId>-->
+            <!--                        <version>4.7.3</version>-->
+            <!--                    </dependency>-->
+            <!--                </dependencies>-->
 
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>check</id>-->
-<!--                        <phase>verify</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>check</id>-->
+            <!--                        <phase>verify</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>check</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
 
-<!--            </plugin>-->
+            <!--            </plugin>-->
 
         </plugins>
     </build>

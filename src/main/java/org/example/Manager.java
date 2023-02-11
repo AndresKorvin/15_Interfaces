@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Manager {
     Repository repository;
@@ -13,7 +14,7 @@ public class Manager {
         repository.saveTicket(ticket);
     }
 
-    protected Ticket[] search(String from, String to) {
+    protected Ticket[] search(String from, String to, Comparator<Ticket> comparator) {
         Ticket[] tickets = repository.findAll();
         Ticket[] result = new Ticket[0];
         int cnt = 0;
@@ -26,14 +27,14 @@ public class Manager {
                     cnt++;
                     Ticket[] tmpArr = new Ticket[cnt];
                     for (int i = 0; i < result.length; i++) {
-                        tmpArr [i] = result [i];
+                        tmpArr[i] = result[i];
                     }
-                    tmpArr [tmpArr.length - 1] = tick;
+                    tmpArr[tmpArr.length - 1] = tick;
                     result = tmpArr;
-                    }
                 }
             }
-        Arrays.sort(result);
-        return result;
         }
+        Arrays.sort(result, comparator);
+        return result;
     }
+}
