@@ -27,14 +27,14 @@ public class Manager {
                     cnt++;
                     Ticket[] tmpArr = new Ticket[cnt];
                     for (int i = 0; i < result.length; i++) {
-                        tmpArr [i] = result [i];
+                        tmpArr[i] = result[i];
                     }
-                    tmpArr [tmpArr.length - 1] = tick;
+                    tmpArr[tmpArr.length - 1] = tick;
                     result = tmpArr;
-                    }
                 }
             }
+        }
         Arrays.sort(result, comparator);
         return result;
-        }
     }
+}
